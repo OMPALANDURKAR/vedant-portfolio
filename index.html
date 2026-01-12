@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vedant Palandurkar | Portfolio</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/scrollbar.css">
+</head>
+
+<body class="h-full">
+  <div id="app-wrapper" class="h-full w-full overflow-auto">
+
+    <!-- Sections -->
+    <div id="nav"></div>
+    <div id="hero"></div>
+    <div id="about"></div>
+    <div id="skills"></div>
+    <div id="projects"></div>
+    <div id="experience"></div>
+    <div id="contact"></div>
+    <div id="footer"></div>
+
+  </div>
+
+  <!-- JS -->
+  <script src="js/config.js"></script>
+  <script src="js/sdk-init.js"></script>
+  <script src="js/smooth-scroll.js"></script>
+  <script src="js/observer.js"></script>
+
+  <!-- Load Sections -->
+  <script>
+    const sections = [
+      "nav","hero","about","skills",
+      "projects","experience","contact","footer"
+    ];
+
+    sections.forEach(section => {
+      fetch(`sections/${section}.html`)
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById(section).innerHTML = data;
+        });
+    });
+  </script>
+</body>
+</html>
