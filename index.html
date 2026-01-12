@@ -8,19 +8,44 @@
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Element SDK (from original file) -->
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/scrollbar.css">
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/scrollbar.css" />
+
+  <!-- View Transitions (from original) -->
+  <style>
+    @view-transition {
+      navigation: auto;
+    }
+  </style>
 </head>
 
 <body class="h-full">
-  <div id="app-wrapper" class="h-full w-full overflow-auto">
+  <div
+    id="app-wrapper"
+    class="h-full w-full overflow-auto"
+    style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);"
+  >
 
-    <!-- Sections -->
+    <!-- Floating Background Elements (from original file) -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl animate-float"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float-delayed"></div>
+      <div class="absolute top-1/2 left-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-3xl animate-float"></div>
+    </div>
+
+    <!-- Sections (Loaded Dynamically) -->
     <div id="nav"></div>
     <div id="hero"></div>
     <div id="about"></div>
@@ -32,24 +57,34 @@
 
   </div>
 
-  <!-- JS -->
+  <!-- Core JS -->
   <script src="js/config.js"></script>
   <script src="js/sdk-init.js"></script>
   <script src="js/smooth-scroll.js"></script>
   <script src="js/observer.js"></script>
 
-  <!-- Load Sections -->
+  <!-- Section Loader -->
   <script>
     const sections = [
-      "nav","hero","about","skills",
-      "projects","experience","contact","footer"
+      "nav",
+      "hero",
+      "about",
+      "skills",
+      "projects",
+      "experience",
+      "contact",
+      "footer"
     ];
 
     sections.forEach(section => {
       fetch(`sections/${section}.html`)
         .then(res => res.text())
-        .then(data => {
-          document.getElementById(section).innerHTML = data;
+        .then(html => {
+          const container = document.getElementById(section);
+          if (container) container.innerHTML = html;
+        })
+        .catch(err => {
+          console.error(`Failed to load section: ${section}`, err);
         });
     });
   </script>

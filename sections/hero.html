@@ -1,28 +1,102 @@
-<section class="min-h-screen flex items-center justify-center px-6 pt-20">
-  <div class="max-w-4xl text-center">
-    <span class="mono text-indigo-400 text-sm">console.log("Hello, World! 👋")</span>
+<section class="min-h-screen flex items-center justify-center px-6 pt-20 relative">
+  <div class="max-w-4xl mx-auto text-center">
 
-    <h1 id="hero-name" class="text-5xl md:text-7xl font-bold text-white mt-4">
-      Vedant <span class="bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent">
+    <!-- Console Line -->
+    <div class="mb-6 animate-slide-up" style="animation-delay: 0.2s;">
+      <span class="mono text-indigo-400 text-sm tracking-wider">
+        console.log("Hello, World! 👋")
+      </span>
+    </div>
+
+    <!-- Name -->
+    <h1
+      id="hero-name"
+      class="text-5xl md:text-7xl font-bold text-white mb-4 animate-slide-up"
+      style="animation-delay: 0.4s;"
+    >
+      Vedant
+      <span
+        class="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400
+               bg-clip-text text-transparent animate-gradient"
+      >
         Palandurkar
       </span>
     </h1>
 
-    <p id="hero-subtitle" class="mono text-lg text-gray-300 mt-4">
-      Full-Stack Developer | GIS & Data Systems
+    <!-- Typing Subtitle -->
+    <div
+      class="h-12 flex items-center justify-center mb-8 animate-slide-up"
+      style="animation-delay: 0.6s;"
+    >
+      <p
+        id="hero-subtitle"
+        class="mono text-lg md:text-xl text-gray-300 typing-text"
+      >
+        Full-Stack Developer | GIS &amp; Data Systems
+      </p>
+    </div>
+
+    <!-- Description -->
+    <p
+      class="text-gray-400 text-lg max-w-2xl mx-auto mb-10 animate-slide-up"
+      style="animation-delay: 0.8s;"
+    >
+      Building <span class="text-indigo-400">scalable</span>,
+      <span class="text-purple-400">production-ready</span> web applications
+      with a focus on
+      <span class="text-pink-400">geospatial visualization</span> and
+      <span class="text-indigo-400">data analytics</span>.
     </p>
 
-    <p class="text-gray-400 max-w-2xl mx-auto mt-6">
-      Building scalable, production-ready web applications with geospatial visualization and data analytics.
-    </p>
-
-    <div class="flex justify-center gap-4 mt-8">
-      <a href="#projects" class="px-8 py-3 bg-indigo-600 rounded-full text-white">
-        View My Work →
+    <!-- CTA Buttons -->
+    <div
+      class="flex flex-wrap gap-4 justify-center animate-slide-up"
+      style="animation-delay: 1s;"
+    >
+      <a
+        href="#projects"
+        class="group px-8 py-3 bg-gradient-to-r
+               from-indigo-600 to-purple-600
+               rounded-full text-white font-medium
+               hover:shadow-lg hover:shadow-indigo-500/30
+               transition-all duration-300"
+      >
+        View My Work
+        <span
+          class="inline-block ml-2
+                 group-hover:translate-x-1 transition-transform"
+        >
+          →
+        </span>
       </a>
-      <a href="#contact" class="px-8 py-3 border border-indigo-500 rounded-full text-indigo-300">
+
+      <a
+        href="#contact"
+        class="px-8 py-3 border border-indigo-500/50
+               rounded-full text-indigo-300 font-medium
+               hover:bg-indigo-500/10
+               transition-all duration-300"
+      >
         Get In Touch
       </a>
     </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg
+        class="w-6 h-6 text-gray-500"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 14l-7 7m0 0l-7-7m7 7V3"
+        />
+      </svg>
+    </div>
+
   </div>
 </section>

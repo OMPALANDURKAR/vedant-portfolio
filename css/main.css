@@ -1,17 +1,35 @@
+/* ================================
+   GLOBAL RESET & FONTS
+================================ */
+
 * {
-  font-family: 'Space Grotesk', sans-serif;
   box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .mono {
   font-family: 'JetBrains Mono', monospace;
 }
 
+/* ================================
+   GLASSMORPHISM CONTAINER
+================================ */
+
 .glass {
   background: rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(99, 102, 241, 0.2);
 }
+
+/* ================================
+   CARD INTERACTION
+================================ */
 
 .card-hover {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -19,4 +37,67 @@
 
 .card-hover:hover {
   transform: translateY(-8px) scale(1.02);
+}
+
+/* ================================
+   NAVIGATION LINKS
+================================ */
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6366f1, #ec4899);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ================================
+   SKILL BAR (IF USED LATER)
+================================ */
+
+.skill-bar {
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  transition: width 1s ease-out;
+}
+
+/* ================================
+   TIMELINE / EXPERIENCE LINE
+================================ */
+
+.timeline-line {
+  background: linear-gradient(
+    180deg,
+    #6366f1,
+    #8b5cf6,
+    #ec4899
+  );
+}
+
+/* ================================
+   SECTION SPACING HELPERS
+================================ */
+
+.section-padding {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+/* ================================
+   TEXT SELECTION (POLISH)
+================================ */
+
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #ffffff;
 }

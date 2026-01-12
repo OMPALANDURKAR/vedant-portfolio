@@ -1,26 +1,164 @@
-<section id="projects" class="py-24 px-6">
+<section id="projects" class="py-24 px-6 relative">
   <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-white mb-8">Projects</h2>
 
-    <div class="glass p-8 rounded-2xl mb-8">
-      <h3 class="text-xl font-bold text-white">
-        🌲 Forest Fire Monitoring & Risk Analysis Dashboard
-      </h3>
-      <p class="text-gray-400 mt-3">
-        GIS-based system using NASA FIRMS satellite data to detect and analyze forest fires.
-      </p>
+    <!-- Section Header -->
+    <div class="flex items-center gap-4 mb-12">
+      <span class="mono text-indigo-400 text-sm">03.</span>
+      <h2 class="text-3xl font-bold text-white">Featured Projects</h2>
+      <div class="flex-1 h-px bg-gradient-to-r from-indigo-500/50 to-transparent"></div>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="glass p-6 rounded-xl">
-        <h4 class="text-white font-semibold">E-commerce Price Forecasting</h4>
-        <p class="text-gray-400 text-sm">ML-based prediction system</p>
-      </div>
+    <!-- Main Featured Project -->
+    <div class="glass rounded-2xl overflow-hidden mb-12 card-hover">
+      <div class="grid md:grid-cols-2">
 
-      <div class="glass p-6 rounded-xl">
-        <h4 class="text-white font-semibold">StoreRank</h4>
-        <p class="text-gray-400 text-sm">Full-stack store management platform</p>
+        <!-- Project Info -->
+        <div class="p-8 md:p-12">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-xs font-medium">
+              Featured
+            </span>
+            <span class="px-3 py-1 bg-indigo-500/20 text-indigo-400 rounded-full text-xs font-medium">
+              6 Months Internship
+            </span>
+          </div>
+
+          <h3 class="text-2xl font-bold text-white mb-4">
+            🌲 Forest Fire Monitoring &amp; Risk Analysis Dashboard
+          </h3>
+
+          <p class="text-gray-400 mb-6">
+            A real-time GIS-based system that visualizes satellite-detected fire
+            points, maps them to Indian districts, and classifies fire risk
+            levels using NASA FIRMS data.
+          </p>
+
+          <!-- Key Points -->
+          <div class="space-y-3 mb-6">
+            <div class="flex items-center gap-2 text-gray-300 text-sm">
+              <svg class="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4
+                     a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+              </svg>
+              NASA FIRMS data integration
+            </div>
+
+            <div class="flex items-center gap-2 text-gray-300 text-sm">
+              <svg class="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4
+                     a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+              </svg>
+              District-level fire risk analysis
+            </div>
+
+            <div class="flex items-center gap-2 text-gray-300 text-sm">
+              <svg class="w-4 h-4 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4
+                     a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+              </svg>
+              Interactive maps &amp; analytics dashboards
+            </div>
+          </div>
+
+          <!-- Tech Stack -->
+          <div class="flex flex-wrap gap-2">
+            <span class="mono text-xs text-indigo-300">React</span>
+            <span class="mono text-xs text-gray-500">•</span>
+            <span class="mono text-xs text-purple-300">Leaflet</span>
+            <span class="mono text-xs text-gray-500">•</span>
+            <span class="mono text-xs text-pink-300">Node.js</span>
+            <span class="mono text-xs text-gray-500">•</span>
+            <span class="mono text-xs text-indigo-300">Express</span>
+            <span class="mono text-xs text-gray-500">•</span>
+            <span class="mono text-xs text-purple-300">Vercel</span>
+          </div>
+        </div>
+
+        <!-- Mock Preview -->
+        <div class="relative bg-gradient-to-br from-indigo-500/20 to-purple-500/20
+                    flex items-center justify-center p-8">
+          <div
+            class="relative w-full aspect-video rounded-lg overflow-hidden
+                   border border-indigo-500/30 shadow-2xl"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-green-900/80
+                     to-indigo-900/80 flex flex-col"
+            >
+              <div class="flex-1 relative">
+                <div class="absolute inset-4 border-2 border-green-500/30 rounded-lg">
+                  <div class="absolute top-2 left-2 flex gap-1">
+                    <div class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
+                    <div class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"
+                         style="animation-delay:0.3s;"></div>
+                    <div class="w-2 h-2 rounded-full bg-yellow-500 animate-pulse"
+                         style="animation-delay:0.6s;"></div>
+                  </div>
+                  <div class="absolute bottom-2 right-2 text-xs text-green-400 mono">
+                    LIVE DATA
+                  </div>
+                </div>
+              </div>
+
+              <div class="h-12 bg-slate-900/50 flex items-center justify-around px-4">
+                <div class="text-center">
+                  <div class="text-xs text-gray-400">Fire Points</div>
+                  <div class="text-sm text-red-400 font-bold">247</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-xs text-gray-400">High Risk</div>
+                  <div class="text-sm text-orange-400 font-bold">12</div>
+                </div>
+                <div class="text-center">
+                  <div class="text-xs text-gray-400">Districts</div>
+                  <div class="text-sm text-indigo-400 font-bold">36</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
+
+    <!-- Other Projects -->
+    <h4 class="text-xl font-semibold text-white mb-6">Other Projects</h4>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div class="glass rounded-xl p-6 card-hover glow-border">
+        <div class="text-3xl mb-4">💰</div>
+        <h4 class="text-white font-semibold mb-2">
+          E-commerce Product Price Forecasting
+        </h4>
+        <p class="text-gray-400 text-sm mb-4">
+          ML-based price prediction system for e-commerce products
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="mono text-xs text-indigo-300">Python</span>
+          <span class="mono text-xs text-purple-300">ML</span>
+          <span class="mono text-xs text-pink-300">Forecasting</span>
+        </div>
+      </div>
+
+      <div class="glass rounded-xl p-6 card-hover glow-border">
+        <div class="text-3xl mb-4">🏪</div>
+        <h4 class="text-white font-semibold mb-2">StoreRank</h4>
+        <p class="text-gray-400 text-sm mb-4">
+          Full-stack user &amp; store management platform with ratings,
+          authentication, and admin dashboards
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="mono text-xs text-indigo-300">React</span>
+          <span class="mono text-xs text-purple-300">Node.js</span>
+          <span class="mono text-xs text-pink-300">MySQL</span>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </section>
